@@ -26,8 +26,8 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: var(--ff-body); font-size: 15px; line-height: 1.65; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { background: var(--bg); color: var(--text); font-family: var(--ff-body); font-size: 15px; line-height: 1.65; overflow-x: hidden; }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
 
@@ -828,7 +828,7 @@
     </div>
     <div class="kontakt-right">
       <div class="kontakt-img fade d2" style="aspect-ratio: unset;">
-        <img src="logo.jpg" alt="Beauty Space logo" style="width: 80vw; max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <img src="logo.jpg" alt="Beauty Space logo" style="width: 80%; height: auto; margin: 0 auto; display: block;">
       </div>
     </div>
   </div>
