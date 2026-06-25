@@ -17,7 +17,7 @@
       --accent:     #7B6B5C;
       --accent-lt:  #9A8878;
       --text:       #1A1A1A;
-      --muted:      rgba(26,26,26,0.52);
+      --muted:      rgba(26,26,26,0.62);
       --border:     rgba(123,107,92,0.18);
       --nav-h:      72px;
       --ff-head:    'Cormorant Garamond', serif;
@@ -53,8 +53,8 @@
       display: flex; flex-direction: column;
     }
     .nav-logo span {
-      font-size: 9.5px;
-      letter-spacing: 0.32em;
+      font-size: 11px;
+      letter-spacing: 0.28em;
       color: var(--muted);
       font-weight: 400;
     }
@@ -77,10 +77,11 @@
       font-size: 12px; font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 13px 28px;
+      padding: 15px 32px;
       background: var(--accent); color: #fff;
       transition: background 0.2s;
       white-space: nowrap;
+      cursor: pointer;
     }
     .nav-cta:hover { background: var(--accent-lt); }
 
@@ -210,6 +211,8 @@
       transition: all 0.2s;
       display: inline-block;
       white-space: nowrap;
+      cursor: pointer;
+      touch-action: manipulation;
     }
     .btn-primary {
       background: var(--accent); color: #fff;
@@ -280,8 +283,8 @@
       color: var(--accent); line-height: 1;
     }
     .stat-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.15em; text-transform: uppercase;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--muted); margin-top: 6px;
     }
     .onas-line {
@@ -330,7 +333,7 @@
       display: flex; flex-direction: column;
     }
     .svc-num {
-      font-size: 11px; font-weight: 500;
+      font-size: 12px; font-weight: 500;
       letter-spacing: 0.2em; color: var(--accent);
       margin-bottom: 10px;
     }
@@ -369,21 +372,22 @@
       font-family: var(--ff-body);
       font-size: 12px; font-weight: 500;
       letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 13px 28px;
+      padding: 15px 28px;
       background: none; border: none;
       border-bottom: 2px solid transparent;
       cursor: pointer;
       color: var(--muted);
       transition: all 0.2s;
       white-space: nowrap;
+      touch-action: manipulation;
     }
     .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
     .tab-btn:hover:not(.active) { color: var(--text); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
     .price-group-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 8px; margin-top: 32px;
     }
@@ -453,9 +457,9 @@
     }
     .kontakt-items { display: flex; flex-direction: column; gap: 28px; }
     .k-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(255,255,255,0.48);
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.62);
       margin-bottom: 4px;
     }
     .k-val {
@@ -467,12 +471,14 @@
     .socials { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
     .social-btn {
       font-family: var(--ff-body);
-      font-size: 11px; font-weight: 500;
+      font-size: 12px; font-weight: 500;
       letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 13px 22px;
-      border: 1px solid rgba(255,255,255,0.22);
-      color: rgba(255,255,255,0.8);
+      padding: 14px 24px;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
       transition: all 0.2s;
+      cursor: pointer;
+      touch-action: manipulation;
     }
     .social-btn:hover { border-color: var(--accent-lt); color: #fff; }
     .kontakt-right { display: flex; flex-direction: column; gap: 16px; }
@@ -487,11 +493,8 @@
     .kontakt-btns {
       display: flex; gap: 12px; flex-wrap: wrap;
     }
-    .kontakt-btns .btn {
-      flex: 1; text-align: center; min-width: 0;
-    }
-    .kontakt-btns .btn-outline {
-      border-color: rgba(255,255,255,0.3);
+    .kontakt-btns .social-btn {
+      flex: 1; text-align: center;
     }
 
     /* ---- FOOTER ---- */
@@ -506,11 +509,11 @@
       font-family: var(--ff-logo);
       font-weight: 300; letter-spacing: 0.22em;
       text-transform: uppercase; font-size: 14px;
-      color: rgba(255,255,255,0.72);
+      color: rgba(255,255,255,0.88);
     }
     .footer-tagline {
       font-size: 12px; letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.70);
     }
 
     /* ---- MOBILE ---- */
@@ -545,13 +548,14 @@
       .tab-btn {
         border: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
-        text-align: center; padding: 12px 8px;
-        font-size: 11px;
+        text-align: center; padding: 13px 8px;
+        font-size: 12px;
       }
       .tab-btn.active {
         background: var(--accent); color: #fff;
         border-color: var(--accent);
       }
+      .tab-btn:last-child { grid-column: 1 / -1; }
 
       /* opinie */
       .opinie-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -804,8 +808,9 @@
       <h2 class="kontakt-h2 fade d1">Umów się na wizytę</h2>
       <div class="kontakt-items">
         <div class="fade d2">
-          <p class="k-label">Miasto</p>
-          <p class="k-val"><a href="https://share.google/nNZBxC3Q49ucHHbIv" target="_blank" rel="noopener">Suwałki</a></p>
+          <p class="k-label">Lokalizacja</p>
+          <p class="k-val">Suwałki, ul. Teofila Noniewicza 61</p>
+          <a href="https://share.google/nNZBxC3Q49ucHHbIv" target="_blank" rel="noopener" class="social-btn" style="display:inline-block; margin-top:12px;">Google Maps</a>
         </div>
         <div class="fade d3">
           <p class="k-label">Godziny otwarcia</p>
@@ -814,21 +819,16 @@
         <div class="fade d3">
           <p class="k-label">Umów wizytę przez</p>
           <p class="k-val">Instagram lub Facebook</p>
+          <div class="kontakt-btns" style="margin-top:12px;">
+            <a href="https://www.instagram.com/beautyspace.aa/" target="_blank" rel="noopener" class="social-btn">Instagram</a>
+            <a href="https://www.facebook.com/p/Beauty-Space-Aleksandra-Ustach-Adrianna-Haraburda-100095611630823/" target="_blank" rel="noopener" class="social-btn">Facebook</a>
+          </div>
         </div>
-      </div>
-      <div class="socials fade d4">
-        <a href="https://www.instagram.com/beautyspace.aa/" target="_blank" rel="noopener" class="social-btn">Instagram</a>
-        <a href="https://www.facebook.com/p/Beauty-Space-Aleksandra-Ustach-Adrianna-Haraburda-100095611630823/" target="_blank" rel="noopener" class="social-btn">Facebook</a>
-        <a href="https://share.google/nNZBxC3Q49ucHHbIv" target="_blank" rel="noopener" class="social-btn">Google Maps</a>
       </div>
     </div>
     <div class="kontakt-right">
-      <div class="kontakt-img fade d2">
-        <img src="paznokcie.jpg" alt="Beauty Space portfolio" style="object-position: center 50%;">
-      </div>
-      <div class="kontakt-btns fade d3">
-        <a href="https://www.instagram.com/beautyspace.aa/" target="_blank" rel="noopener" class="btn btn-primary">Napisz na Instagram</a>
-        <a href="https://www.facebook.com/p/Beauty-Space-Aleksandra-Ustach-Adrianna-Haraburda-100095611630823/" target="_blank" rel="noopener" class="btn btn-outline">Facebook</a>
+      <div class="kontakt-img fade d2" style="aspect-ratio: unset;">
+        <img src="logo.jpg" alt="Beauty Space logo" style="width: 80vw; max-width: 100%; height: auto; margin: 0 auto; display: block;">
       </div>
     </div>
   </div>
